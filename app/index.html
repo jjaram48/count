@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CountApp</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/count-app.css">
+  </head>
+  <body>
+    <script>
+      window.CountAppENV = {{ENV}};
+      window.EmberENV = window.CountAppENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/count-app.js"></script>
+    <script>
+      window.CountApp = require('count-app/app')['default'].create(CountAppENV.APP);
+    </script>
+  </body>
+</html>
