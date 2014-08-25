@@ -2,11 +2,12 @@
 		<h1 class="title">Count on me!</h1>
 
 	<div class="tab-circle">
-		<div class="central-content">
-			Tab Here!
+		<div {{action "addOne"}} class="central-content">
+      {{#if showTapMessage}}
+        Tap Here!
+      {{else}}
+        {{countValue}}
+      {{/if}}
 		</div>
-		<button {{action "countController"}}>
-			
-		</button>
 	</div>
 </div>

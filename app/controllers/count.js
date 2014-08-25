@@ -1,33 +1,23 @@
 import Ember from 'ember';
 
+export default Ember.Controller.extend({
 
-var countController = Ember.ObjectController.extend({
-    actions: {
-        
-        addCount: function() {
-          count : 1;
-            this.set('isCounting', true);
-        },
+  countValue: 0,
 
-        // acceptChanges: function() {
-        //     // Remove is editing property
-        //     this.set('isEditing', false);
- 
-        //     // If the todo is empty, delete it
-        //     // otherwise save it with the new title
-        //     if(Ember.isEmpty(this.get('model.title'))) {
-        //         this.send('removeTodo');
-        //     } else {
-        //         this.get('model').save();
-        //     }
-        // },
-        
-        // removeTodo: function() {
-        //     var todo = this.get('model');
-        //     todo.deleteRecord();
-        //     todo.save();
-        // }
+  showTapMessage: function() {
+    if (this.get('countValue') === 0) {
+      return true;
+    } else {
+      return false;
     }
-});
+  }.property('countValue'),
 
-export default countController;
+  actions: {
+
+    addOne: function() {
+      this.set('countValue', this.get('countValue') + 1);
+    },
+
+  },
+
+});
