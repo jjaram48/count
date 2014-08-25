@@ -5,6 +5,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+   this.resource('count', {path: '/'});
 });
 
 export default Router;

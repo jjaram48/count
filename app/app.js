@@ -9,6 +9,8 @@ var App = Ember.Application.extend({
   Resolver: Resolver
 });
 
+//Test
+
 loadInitializers(App, 'count-app');
 
 export default App;
