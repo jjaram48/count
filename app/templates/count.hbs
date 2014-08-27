@@ -1,6 +1,7 @@
 <div class="wrapper">
 		<h1 class="title"><p>Count</p><p>on me!</p></h1>
 
+{{!-- <<<<<<< HEAD
 	<div class="tab-circle" {{action 'addCount'}}>
 	
 		<div class="central-content">
@@ -9,6 +10,14 @@
 			{{else}}
 			<script> console.log(); </script>
 			{{/if}}
+======= --}}
+	<div class="tab-circle">
+		<div {{action "addOne"}} class="central-content">
+      {{#if showTapMessage}}
+        Tap Here!
+      {{else}}
+        {{countValue}}
+      {{/if}}
 		</div>
 	</div>
 </div>
