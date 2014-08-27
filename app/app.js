@@ -5,11 +5,9 @@ import loadInitializers from 'ember/load-initializers';
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
 var App = Ember.Application.extend({
-  modulePrefix: 'count-app', // TODO: loaded via config
+  modulePrefix: 'count-app',
   Resolver: Resolver
 });
-
-//Test
 
 loadInitializers(App, 'count-app');
 
